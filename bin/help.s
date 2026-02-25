@@ -16,10 +16,6 @@ mov si, PROGRAMS
 mov cx, 0xFFFF
 call str_print
 
-mov si, INFO
-mov cx, 0xFFFF
-call str_print
-
 mov ax, 0
 int 0x16
 int INT_RETURN
@@ -43,7 +39,7 @@ str_print:
   ret
 
 VERSION:  db 0x0a, 0x0d
-          db "OSle - https://github.com/shikaan/osle"
+          db "Katze 2.0 - Yoghurt"
           db 0x0a, 0x0d, 0
 
 BUILTINS: db 0x0a, 0x0d, "Builtins:", 0x0a, 0x0d
@@ -57,10 +53,6 @@ PROGRAMS: db "Programs:", 0x0a, 0x0d
           db "  - mv <source-path> <destination-path>: move file from source"
           db    " to destination", 0x0a, 0x0d
           db "  - rm <file-path>: delete a file", 0x0a, 0x0d
-          db "  - snake: launch a snake game", 0x0a, 0x0d, 0x0a, 0x0d, 0
-
-INFO:     db "For any feedack please refer to "
-          db "https://github.com/shikaan/osle/issues", 0x0a, 0x0d, 0
 
 RETURN:   db 0x0a, 0x0d, "Press any key to return", 0
 

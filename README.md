@@ -62,7 +62,7 @@ make start
 # or
 
 # build Katze
-make Katze
+make
 # use QEMU to run it
 qemu-system-i386 -fda vmkatzz.img
 ```
@@ -71,7 +71,7 @@ qemu-system-i386 -fda vmkatzz.img
 
 ```sh
 # ensure you have a working Katze image at vmkatzz.img
-make Katze
+make
 
 # compile your source to generate my_file.bin
 sdk/build my_file.s
@@ -93,17 +93,11 @@ Write the built image to a device using `dd`:
 
 ```sh
 # generate an Katze image at vmkatzz.img
-make Katze
+make
 
 # write it on a device
 sudo dd if=vmkatzz.img of=/dev/YOUR_DEVICE bs=512 count=1
 ```
-
-## 🤝 Contributing
-
-Feel free to explore the [issues](https://github.com/shikaan/Katze/issues) and 
-[pull requests](https://github.com/shikaan/Katze/pulls) to contribute or request
-features.
 
 ## Thanks to
 OSle for making this project possible

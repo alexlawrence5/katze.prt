@@ -31,7 +31,7 @@ str_print:
   ret
 
 
-BMT:     db "BOOT MODE TRIGGERED!
+BMT:     db "BOOT MODE TRIGGERED!"
 
 RETURN:   db 0x0a, 0x0d, "Press any key to return", 0
 
